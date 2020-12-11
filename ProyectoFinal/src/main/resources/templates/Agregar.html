@@ -8,6 +8,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <body>
 <a  class="btn btn-secondary" th:href="@{/}">CANCELAR</a>
+<div class= "size">
+<form th:action="@{/Guardar}" method="post" th:object="${venta}" >
+<input type="hidden" name="id_venta" th:field= "*{id_venta}">
+<div class= "titulo"><H2>NUEVA VENTA</H2></div>
+<br>
+<label for="producto">Producto:</label> 
+<input  type="text" name="producto" th:field="*{producto}" >
+<br>
+<br>
+<br>
+<label for="precio">Precio:</label> 
+<input type="text" name="precio" th:field="*{precio}" >
+<br>
+<br>
+<br>
+<label for="cantidad">Cantidad:</label> 
+<input type="text" name="cantidad>
+</form>
+</div>
 
 </body>
 </html>
