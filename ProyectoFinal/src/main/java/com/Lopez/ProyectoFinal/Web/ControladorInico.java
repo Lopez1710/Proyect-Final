@@ -47,4 +47,10 @@ public class ControladorInico {
 		
 		return "agregar";
 	}
+	@GetMapping("/eliminar/{id_venta}")
+	public String eliminar(Venta venta) {
+	    VenDAO.delete(venta);;
+		return "redirect:/";				
+	}
+	
 }
