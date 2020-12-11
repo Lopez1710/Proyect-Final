@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymealft.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<link rel= "stylesheet" th:href="@{Estetica.css}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 <body>
+<a class="btn btn-success" th:href="@{/Agregar}"> NUEVA VENTA</a>
 <div class= "size">
-<table>
-<thead>
+<table class="table">
+<thead class="table-dark">
 <th>PRODUCTO </th>
 <th>PRECIO </th>
 <th>CANTIDAD </th>
@@ -20,3 +24,4 @@
 </div>
 </body>
 </html>
+
