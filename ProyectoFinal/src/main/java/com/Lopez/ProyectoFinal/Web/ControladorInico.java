@@ -1,5 +1,25 @@
 package com.Lopez.ProyectoFinal.Web;
 
-public class ControladorInico {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
+import com.Lopez.ProyectoFinal.DAO.VentaDAO;
+
+@Controller // Controla los Recursos de Laweb
+public class ControladorInico {
+	@Autowired // trae todas las clases de SQL
+	private VentaDAO VenDAO;
+	
+	@GetMapping ("/") //Mapea el sitio web
+	public String Inicio(Model m){
+		
+		var MostrarVentas = VenDAO.findAll();
+		
+		m.addAttribute("Venta", MostrarVentas);
+		
+		return "Index";
+	
+	}
 }
