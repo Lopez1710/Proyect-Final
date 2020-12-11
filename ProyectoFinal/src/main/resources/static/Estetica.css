@@ -12,3 +12,16 @@
     transform: translate(50%, -50%);
     border:1px solid rgb(25,25,25);
 }
+
+body{
+  background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg);
+    background-size: cover;
+}
+.titulo {
+    height: 90%;
+    padding: 20px;
+    background: black;
+}
+H2{
+	color: white;
+}
