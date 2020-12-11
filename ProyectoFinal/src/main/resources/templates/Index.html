@@ -19,6 +19,13 @@
 <th>ELIMINAR </th>
 </thead>
 <tbody>
+<tr class= "table-active" th:each= "Ventas: ${Venta} ">
+<td th:text ="${Ventas.producto}" > </td>
+<td th:text ="${Ventas.precio}" > </td>
+<td th:text ="${Ventas.cantidad}" > </td>
+<td><a class="btn btn-warning" th:href="@{/editar/} + ${Ventas.id_venta}" > EDITAR</a> </td>
+<td><a class="btn btn-warning" th:href="@{/eliminar/} + ${Ventas.id_venta}" > ELIMINAR</a> </td>
+ </tr>
 </tbody>
 </table>
 </div>
