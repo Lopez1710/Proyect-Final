@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.Lopez.ProyectoFinal.DAO.VentaDAO;
 
-@Controller // Controla los Recursos de Laweb
+@Controller // Controla los Recursos de La web
 public class ControladorInico {
 	@Autowired // trae todas las clases de SQL
 	private VentaDAO VenDAO;
@@ -15,7 +15,7 @@ public class ControladorInico {
 	@GetMapping ("/") //Mapea el sitio web
 	public String Inicio(Model m){
 		
-		var MostrarVentas = VenDAO.findAll();
+		var MostrarVentas = VenDAO.findAll(); //aplicamos el findAll
 		
 		m.addAttribute("Venta", MostrarVentas);
 		
