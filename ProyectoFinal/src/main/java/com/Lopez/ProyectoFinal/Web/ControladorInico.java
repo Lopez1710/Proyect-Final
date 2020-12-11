@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.Lopez.ProyectoFinal.DAO.VentaDAO;
+import com.Lopez.ProyectoFinal.Entidades.Venta;
 
 @Controller // Controla los Recursos de La web
 public class ControladorInico {
@@ -21,5 +23,20 @@ public class ControladorInico {
 		
 		return "Index";
 	
+	}
+	
+	@GetMapping ("/Agregar")
+	public String Agregar(Venta venta) {
+		
+		return "Agregar";
+	}
+	
+	@PostMapping ("/Guardar")
+	public String Guardar (Venta venta) {
+		VenDAO.save(venta);
+		
+		
+		return "redirect:/";
+		
 	}
 }
