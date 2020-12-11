@@ -39,4 +39,12 @@ public class ControladorInico {
 		return "redirect:/";
 		
 	}
+	
+	@GetMapping("/editar/{id_venta}")
+	public String editar(Venta venta, Model m) {
+		venta = VenDAO.findById(venta.getId_venta()).orElse(null);
+		m.addAttribute("venta",venta);
+		
+		return "agregar";
+	}
 }
